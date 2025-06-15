@@ -15,4 +15,5 @@ fn amazing_function(number: i32) -> i32 {
 ```
 
 _**Note to self:** Learn more about borrow checker, and ownership in rust. Otherwise you will suffer._
-_**Note to self 2:** Learn more about unwrap, when to use it and why, also about what the f*ck it is and how it works.
+
+_**Note to self 2:** Learn more about unwrap, when to use it and why, also about what the f*ck it is and how it works._
