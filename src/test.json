@@ -1,0 +1,18 @@
+[
+  {
+    "value": "Charlie",
+    "next_node": "sth"
+  },
+  {
+    "value": "Charlie2",
+    "next_node": "sth2"
+  },
+  {
+    "value": "Charlie3",
+    "next_node": "sth3"
+  },
+  {
+    "value": "Charlie4",
+    "next_node": "sth4"
+  }
+]

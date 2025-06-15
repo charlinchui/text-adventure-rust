@@ -1,0 +1,48 @@
+[
+  {
+    "id":0,
+    "node_type": "start",
+    "value":"You are an engineer who wakes up in an abandoned underground research facility. The only way out is to restore power to the main elevator, but the facility is full of locked doors, cryptic terminals, and mysterious clues left behind by the previous occupants.",
+    "options":[
+      {
+        "value":"Explore the dormitory",
+        "next_node": 1
+      },
+      {
+        "value":"Try to open front door",
+        "next_node": 2
+      },
+      {
+        "value":"Try to open left door",
+        "next_node": 3
+      },
+      {
+        "value":"Try to open right door",
+        "next_node": 4
+      }
+    ]
+  },
+  {
+    "id":1,
+    "node_type": "regular",
+    "value":"Wandering around the room you find a screwdriver, you are also able to read plaques on each door, each stating what room lays behind the door.",
+    "options":[
+      {
+        "value":"Go through the front door: \"Workshop\" ",
+        "next_node": 5
+      },
+      {
+        "value":"Try to open front door",
+        "next_node": 2
+      },
+      {
+        "value":"Try to open left door",
+        "next_node": 3
+      },
+      {
+        "value":"Try to open right door",
+        "next_node": 4
+      }
+    ]
+  }
+]
