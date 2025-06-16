@@ -1,48 +1,263 @@
 [
   {
-    "id":0,
-    "node_type": "start",
-    "value":"You are an engineer who wakes up in an abandoned underground research facility. The only way out is to restore power to the main elevator, but the facility is full of locked doors, cryptic terminals, and mysterious clues left behind by the previous occupants.",
-    "options":[
+    "id": 0,
+    "node_type": "START",
+    "value": "You wake up in a sterile underground lab with no memory of how you got there. Emergency lighting casts red shadows across abandoned workstations. A computer terminal blinks nearby, and you notice three sealed doors marked with different symbols: a gear, a lightning bolt, and a biohazard sign.",
+    "options": [
       {
-        "value":"Explore the dormitory",
+        "value": "Check the computer terminal",
         "next_node": 1
       },
       {
-        "value":"Try to open front door",
+        "value": "Try the door with the gear symbol",
         "next_node": 2
       },
       {
-        "value":"Try to open left door",
+        "value": "Try the door with the lightning bolt",
         "next_node": 3
       },
       {
-        "value":"Try to open right door",
+        "value": "Try the door with the biohazard symbol",
         "next_node": 4
       }
     ]
   },
   {
-    "id":1,
-    "node_type": "regular",
-    "value":"Wandering around the room you find a screwdriver, you are also able to read plaques on each door, each stating what room lays behind the door.",
-    "options":[
+    "id": 1,
+    "node_type": "REGULAR",
+    "value": "The terminal displays a log: 'Project Echo terminated. Evacuation complete. Subject 7 remains in stasis.' A keycard labeled 'MAINTENANCE' lies beside the keyboard. You realize you might be Subject 7.",
+    "options": [
       {
-        "value":"Go through the front door: \"Workshop\" ",
+        "value": "Use the maintenance keycard on the gear door",
         "next_node": 5
       },
       {
-        "value":"Try to open front door",
-        "next_node": 2
+        "value": "Search for more information about Project Echo",
+        "next_node": 6
       },
       {
-        "value":"Try to open left door",
+        "value": "Try the lightning bolt door",
         "next_node": 3
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "node_type": "REGULAR",
+    "value": "The gear door is locked tight. Through a small window, you see a workshop filled with mechanical equipment and what looks like an elevator shaft.",
+    "options": [
+      {
+        "value": "Look for another way in",
+        "next_node": 7
       },
       {
-        "value":"Try to open right door",
+        "value": "Check the computer terminal",
+        "next_node": 1
+      },
+      {
+        "value": "Try the lightning bolt door",
+        "next_node": 3
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "node_type": "REGULAR",
+    "value": "The lightning bolt door opens to reveal the facility's power control room. Most systems are offline, but you see a manual override switch and a warning: 'GENERATOR REQUIRES FUEL CELL'.",
+    "options": [
+      {
+        "value": "Pull the manual override switch",
+        "next_node": 8
+      },
+      {
+        "value": "Search for a fuel cell",
+        "next_node": 9
+      },
+      {
+        "value": "Return and try another door",
+        "next_node": 2
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "node_type": "REGULAR",
+    "value": "The biohazard door opens with a hiss. Inside, you find a laboratory with specimen containers and a glowing blue fuel cell in a containment unit. A note reads: 'Prototype power source - UNSTABLE'.",
+    "options": [
+      {
+        "value": "Take the fuel cell carefully",
+        "next_node": 10
+      },
+      {
+        "value": "Leave it and find another power source",
+        "next_node": 9
+      },
+      {
+        "value": "Read the research notes first",
+        "next_node": 11
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "node_type": "REGULAR",
+    "value": "The maintenance keycard works! You enter a workshop with tools and an elevator shaft. The elevator is stuck between floors, but you find a manual crank and a standard fuel cell in a toolbox.",
+    "options": [
+      {
+        "value": "Use the manual crank on the elevator",
+        "next_node": 12
+      },
+      {
+        "value": "Take the fuel cell to the power room",
+        "next_node": 13
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "node_type": "REGULAR",
+    "value": "Digging deeper into the files, you discover Project Echo was developing enhanced humans. The evacuation happened after a containment breach. Your enhanced strength explains how you broke free from stasis.",
+    "options": [
+      {
+        "value": "Use your enhanced strength to force open doors",
+        "next_node": 14
+      },
+      {
+        "value": "Find the workshop with the maintenance keycard",
+        "next_node": 5
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "node_type": "REGULAR",
+    "value": "You find a ventilation shaft leading to the workshop, but it's narrow and dark. You also notice the biohazard door is slightly ajar.",
+    "options": [
+      {
+        "value": "Crawl through the ventilation shaft",
+        "next_node": 15
+      },
+      {
+        "value": "Investigate the biohazard door",
         "next_node": 4
       }
     ]
+  },
+  {
+    "id": 8,
+    "node_type": "END",
+    "value": "You pull the override switch without a fuel cell. Sparks fly and the room plunges into darkness. The emergency systems activate, sealing you inside forever. The facility's automated voice announces: 'Containment breach detected. Lockdown initiated.'",
+    "options": []
+  },
+  {
+    "id": 9,
+    "node_type": "REGULAR",
+    "value": "Searching the facility, you find a standard fuel cell in a supply closet, but it's only half-charged. It might work, but there's risk of power failure.",
+    "options": [
+      {
+        "value": "Use the half-charged fuel cell",
+        "next_node": 16
+      },
+      {
+        "value": "Look for the unstable fuel cell instead",
+        "next_node": 4
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "node_type": "REGULAR",
+    "value": "The unstable fuel cell pulses with energy. You carefully carry it to the power room, knowing one wrong move could be catastrophic.",
+    "options": [
+      {
+        "value": "Install it slowly and carefully",
+        "next_node": 17
+      },
+      {
+        "value": "Rush to install it before it destabilizes",
+        "next_node": 18
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "node_type": "REGULAR",
+    "value": "The research notes reveal the fuel cell becomes unstable if exposed to sudden temperature changes. You also find insulated gloves that will help handle it safely.",
+    "options": [
+      {
+        "value": "Take the fuel cell with the insulated gloves",
+        "next_node": 17
+      },
+      {
+        "value": "Find a safer power source",
+        "next_node": 9
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "node_type": "END",
+    "value": "You manually crank the elevator, but without power, it only moves a few feet before the mechanism jams permanently. You're trapped between floors in a metal box. Hours pass before you realize this will be your tomb.",
+    "options": []
+  },
+  {
+    "id": 13,
+    "node_type": "END",
+    "value": "You install the standard fuel cell and restore partial power. The elevator hums to life, and you ride it to the surface. Emerging into daylight, you see a research complex surrounded by military barriers. A guard approaches: 'Subject 7? We've been waiting for you to wake up.'",
+    "options": []
+  },
+  {
+    "id": 14,
+    "node_type": "REGULAR",
+    "value": "Your enhanced strength allows you to tear open the gear door. Inside the workshop, you find the elevator shaft and realize you could climb up manually with your new abilities.",
+    "options": [
+      {
+        "value": "Climb the elevator shaft with enhanced strength",
+        "next_node": 19
+      },
+      {
+        "value": "Look for a proper power source first",
+        "next_node": 13
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "node_type": "REGULAR",
+    "value": "You crawl through the tight ventilation shaft and drop into the workshop. Your clothes are torn, but you're in. You find tools and the elevator shaft, plus a fuel cell.",
+    "options": [
+      {
+        "value": "Take the fuel cell to restore power",
+        "next_node": 13
+      },
+      {
+        "value": "Try to manually operate the elevator",
+        "next_node": 12
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "node_type": "END",
+    "value": "The half-charged fuel cell provides just enough power to activate the elevator. Halfway to the surface, the power fails and you're stuck. But the brief power surge triggered an emergency beacon. Rescue teams find you within hours, weak but alive.",
+    "options": []
+  },
+  {
+    "id": 17,
+    "node_type": "END",
+    "value": "Using careful technique, you successfully install the unstable fuel cell. The facility powers up completely, and advanced systems come online. The elevator takes you to the surface where a team of scientists greets you: 'Welcome back, Subject 7. Project Echo Phase 2 is ready to begin.'",
+    "options": []
+  },
+  {
+    "id": 18,
+    "node_type": "END",
+    "value": "Rushing the installation, you destabilize the fuel cell. The explosion rocks the facility, but your enhanced body survives. The blast creates a new exit through the ceiling. You climb out to find the research facility is actually on a remote island. Freedom, but you're completely alone.",
+    "options": []
+  },
+  {
+    "id": 19,
+    "node_type": "END",
+    "value": "Your enhanced strength makes climbing the elevator shaft easy. You reach the surface to discover the facility was a secret government project. Your successful escape proves the enhancements work. You have a choice: return to your old life or embrace your new abilities and the unknown future they offer.",
+    "options": []
   }
 ]
